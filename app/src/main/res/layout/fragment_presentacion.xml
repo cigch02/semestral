@@ -94,7 +94,7 @@
             android:id="@+id/textView7"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="PARCIAL APLICATIVO"
+            android:text="PROYECTO FINAL"
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="14sp" />
@@ -103,8 +103,9 @@
             android:id="@+id/textView8"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="BLANCO"
-            android:textColor="@color/white"
+            android:text="APLICACIÓN DE SENSORES"
+            android:textAlignment="center"
+            android:textColor="@color/black"
             android:textSize="14sp" />
 
         <TextView
@@ -136,6 +137,7 @@
             android:id="@+id/textView14"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:text="CARLOS GONZÁLEZ"
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="14sp" />
@@ -144,7 +146,7 @@
             android:id="@+id/textView15"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="VALERIE TUÑÓN"
+            android:text="GERALD RODRÍGUEZ"
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="14sp" />
@@ -153,8 +155,9 @@
             android:id="@+id/textView17"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="BLANCO"
-            android:textColor="@color/white"
+            android:text="VALERIE TUÑÓN"
+            android:textAlignment="center"
+            android:textColor="@color/black"
             android:textSize="14sp" />
 
         <TextView
