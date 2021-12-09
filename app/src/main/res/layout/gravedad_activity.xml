@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/container"
     android:layout_width="match_parent"
@@ -15,33 +16,59 @@
             android:id="@+id/textView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="100sp"
             android:layout_marginBottom="50sp"
-            android:text="Sensor de Gravedad"
+            android:text="@string/sensor_de_gravedad"
             android:textAlignment="center"
+            android:textColor="@color/black"
             android:textSize="24sp" />
 
         <TextView
             android:id="@+id/xText"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50sp"
+            android:layout_marginEnd="50sp"
+            android:layout_marginBottom="30sp"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/yText"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50sp"
+            android:layout_marginEnd="50sp"
+            android:layout_marginBottom="30sp"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/zText"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50sp"
+            android:layout_marginEnd="50sp"
+            android:layout_marginBottom="30sp"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/imagen"
+            android:layout_width="match_parent"
+            android:layout_height="196dp"
+            android:layout_marginStart="100sp"
+            android:layout_marginEnd="100sp"
+            tools:srcCompat="@tools:sample/avatars" />
 
         <Button
             android:id="@+id/Menu"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="100sp"
-            android:layout_marginTop="200sp"
+            android:layout_marginTop="50sp"
             android:layout_marginEnd="100sp"
-            android:text="Menu" />
+            android:text="@string/menu" />
+
     </LinearLayout>
 </FrameLayout>

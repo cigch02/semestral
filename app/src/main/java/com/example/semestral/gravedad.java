@@ -11,8 +11,10 @@ import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.media.AudioManager;
 import android.os.Bundle;
+import android.os.Vibrator;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.semestral.ui.main.GravedadFragment;
@@ -22,9 +24,11 @@ public class gravedad extends AppCompatActivity implements SensorEventListener{
     private SensorManager sensorM;
     private Sensor Gravedad;
     private boolean isGravitySensorPresent;
-    private AudioManager aManeger;
+    private Vibrator V;
     private Button Menu;
     private Intent i;
+    private ImageView Ima;
+    int []flecha = new int[]{R.drawable.flecha_arriba, R.drawable.flecha_abajo, R.drawable.flecha_drch, R.drawable.flecha_izq};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,11 +36,12 @@ public class gravedad extends AppCompatActivity implements SensorEventListener{
         setContentView(R.layout.gravedad_activity);
 
         i=new Intent(this, MainActivity.class);
-        aManeger = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
+        V = (Vibrator) getSystemService(VIBRATOR_SERVICE);
         xT = findViewById(R.id.xText);
         yT = findViewById(R.id.yText);
         zT = findViewById(R.id.zText);
         Menu = (Button) findViewById(R.id.Menu);
+        Ima = (ImageView) findViewById(R.id.imagen);
 
         sensorM = (SensorManager) getSystemService(SENSOR_SERVICE);
 
@@ -60,18 +65,35 @@ public class gravedad extends AppCompatActivity implements SensorEventListener{
 
     @Override
     public void onSensorChanged(SensorEvent sensorEvent) {
-        xT.setText(sensorEvent.values[0]+" m/s2");
-        yT.setText(sensorEvent.values[1]+" m/s2");
-        zT.setText(sensorEvent.values[2]+" m/s2");
+        xT.setText("X: "+sensorEvent.values[0]+" m/s2");
+        yT.setText("Y: "+sensorEvent.values[1]+" m/s2");
+        zT.setText("Z: "+sensorEvent.values[2]+" m/s2");
 
         if(sensorEvent.values[2]<-9.7)
         {
             getWindow().getDecorView().setBackgroundColor(Color.GREEN);
-            aManeger.setRingerMode(AudioManager.RINGER_MODE_VIBRATE);
+            V.vibrate(5000);
         }
         else{
             getWindow().getDecorView().setBackgroundColor(Color.WHITE);
-            aManeger.setRingerMode(AudioManager.RINGER_MODE_NORMAL);
+            V.cancel();
+        }
+
+        if(sensorEvent.values[0]>0.0001 && sensorEvent.values[1]<-0.0001)
+        {
+            Ima.setImageResource(flecha[0]);
+        }
+        else if(sensorEvent.values[0]<-0.001 && sensorEvent.values[1]<-0.0001)
+        {
+            Ima.setImageResource(flecha[2]);
+        }
+        else if(sensorEvent.values[0]<-0.0001 && sensorEvent.values[1]>0.0001)
+        {
+            Ima.setImageResource(flecha[1]);
+        }
+        else if(sensorEvent.values[0]>0.0001 && sensorEvent.values[1]>0.0001)
+        {
+            Ima.setImageResource(flecha[3]);
         }
     }
 

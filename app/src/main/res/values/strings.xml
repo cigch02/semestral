@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Semestral</string>
+    <string name="sensor_de_gravedad">Sensor de Gravedad</string>
+    <string name="menu">Menu</string>
 </resources>
