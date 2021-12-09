@@ -14,6 +14,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
 
+    static int i=0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,8 +23,16 @@ public class MainActivity extends AppCompatActivity {
         getSupportActionBar().hide(); //hide the title bar.
 
         BottomNavigationView btn = findViewById(R.id.bottomNavigationView);
-        getSupportFragmentManager().beginTransaction().replace(R.id.frament_layout, new Presentacion()).commit();
-        btn.setSelectedItemId(R.id.item1);
+        if(i==0)
+        {
+            getSupportFragmentManager().beginTransaction().replace(R.id.frament_layout, new Presentacion()).commit();
+            btn.setSelectedItemId(R.id.item1);
+        }
+        else{
+            getSupportFragmentManager().beginTransaction().replace(R.id.frament_layout, new MainMenu()).commit();
+            btn.setSelectedItemId(R.id.item2);
+        }
+
 
         btn.setOnNavigationItemReselectedListener(new BottomNavigationView.OnNavigationItemReselectedListener() {
             @Override
@@ -36,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
                         break;
 
                     case R.id.item2:
+                        i=1;
                         F = new MainMenu();
                         break;
 
