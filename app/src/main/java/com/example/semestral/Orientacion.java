@@ -37,6 +37,8 @@ public class Orientacion extends AppCompatActivity implements SensorEventListene
         giroscopio = sm.getDefaultSensor(Sensor.TYPE_GYROSCOPE);
         sm.registerListener(this,giroscopio,SensorManager.SENSOR_DELAY_NORMAL);
 
+
+
         menu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
