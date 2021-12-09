@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        getSupportActionBar().hide(); //hide the title bar.
         iG = new Intent(this,gravedad.class);
         Gb =  findViewById(R.id.Gravedad);
 
