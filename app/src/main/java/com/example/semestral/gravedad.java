@@ -17,7 +17,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.semestral.ui.main.GravedadFragment;
+
 
 public class gravedad extends AppCompatActivity implements SensorEventListener{
     private TextView xT, yT, zT;

@@ -1,16 +1,19 @@
 package com.example.semestral;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 
-import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
+
+import com.example.semestral.fragemto.MainMenu;
+import com.example.semestral.fragemto.Presentacion;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button Gb;
-    Intent iG;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,17 +21,30 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         getSupportActionBar().hide(); //hide the title bar.
 
-        iG = new Intent(this,gravedad.class);
-        Gb =  findViewById(R.id.Gravedad);
+        BottomNavigationView btn = findViewById(R.id.bottomNavigationView);
+        getSupportFragmentManager().beginTransaction().replace(R.id.frament_layout, new Presentacion()).commit();
+        btn.setSelectedItemId(R.id.item1);
 
-
-        Gb.setOnClickListener(new View.OnClickListener() {
+        btn.setOnNavigationItemReselectedListener(new BottomNavigationView.OnNavigationItemReselectedListener() {
             @Override
-            public void onClick(View view) {
-                startActivity(iG);
+            public void onNavigationItemReselected(@NonNull MenuItem item) {
+                Fragment F =null;
+                switch (item.getItemId())
+                {
+                    case R.id.item1:
+                        F = new Presentacion();
+                        break;
+
+                    case R.id.item2:
+                        F = new MainMenu();
+                        break;
+
+                }
+                getSupportFragmentManager().beginTransaction().replace(R.id.frament_layout,F).commit();
             }
         });
 
-    }
 
+        }
 }
+

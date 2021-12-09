@@ -2,4 +2,6 @@
     <string name="app_name">Semestral</string>
     <string name="sensor_de_gravedad">Sensor de Gravedad</string>
     <string name="menu">Menu</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
