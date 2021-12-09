@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Semestral">
         <activity
+            android:name=".luz_activity"
+            android:exported="false" />
+        <activity
             android:name=".Orientacion"
             android:exported="true" />
         <activity
