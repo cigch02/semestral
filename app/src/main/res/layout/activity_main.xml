@@ -4,24 +4,91 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#0091EA"
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/tv2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Muchas Gracias Por ayudarme ;D muax"
+        android:text="Sensores"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.682" />
+
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Proyecto Semestral"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.053" />
 
     <Button
         android:id="@+id/Gravedad"
         android:layout_width="151dp"
-        android:layout_height="50dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="535dp"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="monospace"
         android:text="Gravedad"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/Orientacion"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="535dp" />
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/Orientacion"
+        android:layout_width="151dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="15dp"
+        android:fontFamily="monospace"
+        android:text="Orientación"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/Luz"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Gravedad" />
+
+    <Button
+        android:id="@+id/Luz"
+        android:layout_width="151dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="15dp"
+        android:fontFamily="monospace"
+        android:text="Luz"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Orientacion" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="310dp"
+        android:layout_height="354dp"
+        android:layout_marginTop="97dp"
+        android:layout_marginBottom="280dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
