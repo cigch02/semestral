@@ -35,7 +35,7 @@ public class gravedad extends AppCompatActivity implements SensorEventListener{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.gravedad_activity);
 
-        i=new Intent(this, MainActivity.class);
+        i = new Intent(this, MainActivity.class);
         V = (Vibrator) getSystemService(VIBRATOR_SERVICE);
         xT = findViewById(R.id.xText);
         yT = findViewById(R.id.yText);

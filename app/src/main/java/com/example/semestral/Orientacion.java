@@ -31,12 +31,11 @@ public class Orientacion extends AppCompatActivity implements SensorEventListene
 
     }
 
-
     @Override
     public void onSensorChanged(SensorEvent sensorEvent) {
         x.setText(String.valueOf(sensorEvent.values[0]));
-        y.setText(String.valueOf(sensorEvent.values[0]));
-        z.setText(String.valueOf(sensorEvent.values[0]));
+        y.setText(String.valueOf(sensorEvent.values[1]));
+        z.setText(String.valueOf(sensorEvent.values[2]));
     }
 
     @Override

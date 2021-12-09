@@ -17,8 +17,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         getSupportActionBar().hide(); //hide the title bar.
+
         iG = new Intent(this,gravedad.class);
         Gb =  findViewById(R.id.Gravedad);
+
 
         Gb.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -26,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(iG);
             }
         });
+
     }
 
 }
