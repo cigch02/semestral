@@ -26,7 +26,7 @@ public class Orientacion extends AppCompatActivity implements SensorEventListene
         z = (TextView) findViewById(R.id.z);
 
         sm = (SensorManager) getSystemService((SENSOR_SERVICE));
-        giroscopio = sm.getDefaultSensor(Sensor.TYPE_GYROSCOPE;
+        giroscopio = sm.getDefaultSensor(Sensor.TYPE_GYROSCOPE);
         sm.registerListener(this,giroscopio,SensorManager.SENSOR_DELAY_NORMAL);
 
     }
