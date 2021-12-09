@@ -86,7 +86,6 @@
             android:id="@+id/textView12"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="BLANCO"
             android:textColor="@color/white"
             android:textSize="14sp" />
 
@@ -112,7 +111,6 @@
             android:id="@+id/textView9"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="BLANCO"
             android:textColor="@color/white"
             android:textSize="14sp" />
 
@@ -120,7 +118,6 @@
             android:id="@+id/textView10"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="BLANCO"
             android:textColor="@color/white"
             android:textSize="14sp" />
 
@@ -164,7 +161,6 @@
             android:id="@+id/textView16"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="BLANCO"
             android:textColor="@color/white"
             android:textSize="14sp" />
 
