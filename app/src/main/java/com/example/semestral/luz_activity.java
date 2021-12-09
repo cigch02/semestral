@@ -24,7 +24,7 @@ public class luz_activity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_luz);
         volver = (Button) findViewById(R.id.volver);
         int_v = new Intent(this, MainActivity.class);
         lightLevel = (TextView) findViewById(R.id.light_level);
@@ -34,7 +34,7 @@ public class luz_activity extends AppCompatActivity {
         Sensor sensor = sensorManager.getDefaultSensor(Sensor.TYPE_LIGHT);
         sensorManager.registerListener(listener, sensor, SensorManager.SENSOR_DELAY_NORMAL);
 
-        volver.setOnClickListener(new View.OnClickListener() {
+       volver.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(int_v);
