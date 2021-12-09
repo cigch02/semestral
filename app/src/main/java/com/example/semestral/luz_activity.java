@@ -2,12 +2,14 @@ package com.example.semestral;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Context;
+import android.content.Intent;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.ImageView;
 
@@ -17,17 +19,27 @@ public class luz_activity extends AppCompatActivity {
     private TextView lightLevel;
     ImageView foquito_a;
     ImageView foquito_e;
-
+    Button volver;
+    Intent int_v;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        volver = (Button) findViewById(R.id.volver);
+        int_v = new Intent(this, MainActivity.class);
         lightLevel = (TextView) findViewById(R.id.light_level);
         foquito_a = (ImageView) findViewById(R.id.apagado);
         foquito_e = (ImageView) findViewById(R.id.encendido);
         sensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
         Sensor sensor = sensorManager.getDefaultSensor(Sensor.TYPE_LIGHT);
         sensorManager.registerListener(listener, sensor, SensorManager.SENSOR_DELAY_NORMAL);
+
+        volver.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(int_v);
+            }
+        });
     }
     @Override
     protected void onDestroy() {
